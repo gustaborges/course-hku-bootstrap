@@ -1,3 +1,8 @@
+.header {
+    background-color:  rgb(211, 117, 79);
+    color:white;
+}
+
 .row-header {
     margin: 0px auto;
     padding: 0px;
@@ -11,12 +16,12 @@
 }
 
 .footer {
-    background-color: rgb(211, 117, 79);
+    background-color: rgb(230, 141, 106);
     margin: 0px auto;
     padding: 20px 0px;
     color: white;
 }
 
 .footer a {
-    color: rgb(104, 49, 5);
+    color: rgb(66, 31, 2);
 }
