@@ -1,9 +1,12 @@
+body {
+    padding-top: 50px;
+}
 .jumbotron {
-    background-color:  rgb(211, 117, 79);
+    background-color:  rgb(214, 41, 105);
     color:white;
     padding: 70px 30px;
     margin: 0px auto;
-
+    border-radius: 0px;
 }
 
 .row-header {
@@ -19,7 +22,7 @@
 }
 
 .footer {
-    background-color: rgb(230, 141, 106);
+    background-color: rgb(199, 42, 99);
     margin: 0px auto;
     padding: 20px 0px;
     color: white;
@@ -27,4 +30,20 @@
 
 .footer a {
     color: rgb(66, 31, 2);
+}
+
+.footer .btn-social-icon {
+    color: white;
+}
+
+.navbar-dark {
+    background-color: #272727;
+}
+
+.breadcrumb {
+    margin-top:10px;
+}
+
+.navbar-toggler {
+    margin: 0px 15px 0px 0px;
 }
