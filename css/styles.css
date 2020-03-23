@@ -1,6 +1,9 @@
-.header {
+.jumbotron {
     background-color:  rgb(211, 117, 79);
     color:white;
+    padding: 70px 30px;
+    margin: 0px auto;
+
 }
 
 .row-header {
