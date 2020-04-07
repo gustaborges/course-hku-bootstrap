@@ -62,3 +62,7 @@ h2 .badge {
     border-right:1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
+
+#accordion .card  {
+    margin-bottom:10px;
+}
