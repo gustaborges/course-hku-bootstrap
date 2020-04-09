@@ -9,6 +9,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
     
     <title>Ristorante Con Fusion: About Us</title>
@@ -18,46 +20,202 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-md fixed-top">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
-            <div class="collapse navbar-collapse" id="Navbar">
+            <div class="collapse navbar-collapse" id="Navigation">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tooltip" title="<strong>See our delicious masterpieces</strong>" data-html="true" data-placement="bottom" href="#"><span class="fa fa-list fa-lg"></span> Menu</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
 
-    <header class="jumbotron header">
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="exampleInputEmail3" class="sr-only">Email address</label>
+                                <input type="email" id="exampleInputEmail3" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="E-mail">
+                            </div>
+
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3" class="sr-only">Password</label>
+                                <input class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="reserveTableModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!--Alerta-->
+                    <div class="alert alert-warning" role="alert">
+                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                        <strong>Warning:</strong> Call us to reserve for more than 6 guests.
+                    </div>
+                    <!---Form-->
+                    <form>
+                        <!--Primeira linha: Numero de visitantes-->
+                        <div class="row form-group">                                
+                            <label class="col-12 col-sm-4 col-lg-2">Number of Guests</label>
+
+                            <div class="col-12 col-sm col-lg">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberguests" id="oneguest" value="1">
+                                    <label class="form-check-label" for="numberguests" class="col-form-label">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberguests" id="twoguests" value="2">
+                                    <label class="form-check-label" for="numberguests" class="col-form-label">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberguests" id="threeguests" value="3">
+                                    <label class="form-check-label" for="numberguests" class="col-form-label">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberguests" id="fourguests" value="4">
+                                    <label class="form-check-label" for="numberguests" class="col-form-label">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberguests" id="fiveguests" value="5">
+                                    <label class="form-check-label" for="numberguests" class="col-form-label">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="numberguests" id="sixguests" value="6">
+                                    <label class="form-check-label" for="numberguests" class="col-form-label">6</label>
+                                </div>
+                            </div> 
+                        </div>
+                        <!--Segunda Linha: Fumante ou Não Fumante-->
+                        <div class="row form-group">
+                            <label class="col-12 col-sm-4 col-lg-2">Section</label>
+                            <div class="col-12 col-sm">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="tableSection" value="nonsmoking" id="nonsmoking">Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="tableSection" value="smoking" id="smoking">Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Terceira Linha: Data e Horário-->
+                        <div class="row form-group">                                  
+                            <label class="col-12 col-sm-4 col-lg-2">Date and Time</label>
+                            <div class="col-12 col-sm-4 col-lg-4">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" name="reservationdate" id="reservationdate" placeholder="Date">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-4 col-lg-4 mt-2 mt-sm-0">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control" name="reservationtime" id="reservationtdate" placeholder="Time">
+                                </div>
+                            </div>
+                        </div>
+                        <!--Quarta Linha: Efetuar reserva-->
+                        <div class="row form-group">
+                            <div class="col-12 offet-sm-4 offset-lg-2">
+                                <button type="button" class="btn bg-secondary text-white font-weight-bold" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn bg-primary text-white font-weight-bold">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
+
                 <div class="col-12 col-sm align-self-center">
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <img src="img/logo.png" class="img-fluid mr-auto ml-auto d-block">
                         </div>
                         <div class="col-12 col-sm-6 mt-4 mt-sm-0 align-self-center">
-                            <a class="btn btn-sm btn-warning d-block text-center font-weight-bold" role="button"
-                            data-toggle="tooltip" data-html="true" data-placement="bottom" title="Or call us at <br><strong>+55 (11) 2222-2222</strong>" href="#reserveform">Reserve Table</a>
+                            <a class="btn btn-warning d-block text-center font-weight-bold" role="button"
+                            data-toggle="modal" data-target="#reserveTableModal">Reserve Table</a>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </header>
 
     <div class="container">
+
         <div class="row">
-            <div class="col-12 mt-5">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active">Contact Us</li>
+            </ol>
+
+            <div class="col-12">
                <h3>About Us</h3>
                <hr>
             </div>
